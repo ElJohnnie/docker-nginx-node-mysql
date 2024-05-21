@@ -23,7 +23,7 @@ services:
     networks:
       - default-network
     volumes:
-      - .:/usr/src/app
+      - ./node:/usr/src/app
       - /usr/src/app/node_modules
 
   db:
