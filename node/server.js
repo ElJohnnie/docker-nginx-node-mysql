@@ -5,11 +5,11 @@ const app = express()
 const port = process.env.APP_PORT || 3000
 
 const config = {
-  host: 'db',
-  user: 'root',
-  password: 'root',
-  database: 'nodedb',
-}
+  host: process.env.DB_HOST || 'db',
+  user: process.env.DB_USER || 'root',
+  password: process.env.DB_PASSWORD || 'root',
+  database: process.env.DB_NAME || 'nodedb',
+};
 
 const connection = mysql.createConnection(config)
 
